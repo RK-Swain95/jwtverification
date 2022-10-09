@@ -47,7 +47,7 @@ module.exports.createsession=function(req,res){
                 return res.redirect('back');
             }
           var token=jwt.sign(user.toJSON(),'codeial',{expiresIn:'1000000'});
-          console.log(token);
+         // console.log(token);
             //handle session creation
             res.cookie('jwt',token);
             return res.redirect('/users/profile');

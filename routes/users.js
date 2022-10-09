@@ -5,18 +5,11 @@ const passport=require('passport');
 
 const usersController = require("../controllers/users_controller");
 
-router.get('/profile',passport.checkAuthentication,usersController.profile);
-router.post('/update/:id',passport.checkAuthentication,usersController.update);
+router.get('/profile',usersController.profile);
+router.post('/update/:id',usersController.update);
 router.get("/sign-up", usersController.signup);
 router.get("/sign-in", usersController.signin);
 router.post("/create", usersController.create);
-//use passport as a middle ware to aunthenticate
-router.post('/create-session',passport.authenticate(
-    'local',
-    {failureRedirect:'/users/sign-in'}
-),usersController.createsession);
-// router.get("/sign-out", usersController.signOut);
-// router.get("/reset-password", usersController.resetPassword);
 
 
 

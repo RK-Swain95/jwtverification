@@ -29,26 +29,17 @@ module.exports.create=function(req,res){
 
 }
 module.exports.signup=function(req,res){
-    if(req.isAuthenticated()){
-       return res.redirect('/users/profile');
-    }
+   
     return res.render('user_sign_up',{title:'Codeial | Sign up'});
 }
 //sign in
 module.exports.signin=function(req,res){
     //if the person sign in redirect to profile page and dont not open sign in page
-    if(req.isAuthenticated()){
-        console.log('sign in');
-        res.redirect('/users/profile');
-    }
+  
     return res.render('user_sign_in',{title:'Codeial | Sign in'});
 }
 
-module.exports.createsession=function(req,res){
-   
-    return res.redirect('/users/sign-up');
 
-}
 //profile
 module.exports.profile = async function (req, res) {
     // if(req.user){

@@ -42,34 +42,9 @@ app.set('layout extractScripts',true);
 app.set('view engine','ejs');
 app.set('views','./views');
 
-//mongo store is used to store session cookie in the db
-// app.use(session({
-//     //name of the section cookie
-//     name:'codeial',
-//     //todo change the secret before deployment in production mode
-//     //encodeing
-//     secret:'blahsomething',
-//     saveUninitialized:false,
-//     resave:false,
-//     cookie:{
-//         maxAge:(1000*60*100)
-//     },
-//     //it store the section information even if server is restart ,its remain in the memory/database so that sign in user dont get reset even server restart, that info does not get lost
-//     store: MongoStore.create(
-//         {
-//            mongoUrl:'mongodb://localhost:27017/placement_cell',
-//             autoRemove:'disabled'
-//         },
-//         function(err){
-//             console.log(err || 'connect mongo db setup ok');
-//         }
-//     )
-// }));
+
 
 app.use(passport.initialize());
-//app.use(passport.session());
-
-//app.use(passport.setAuthenticatedUser);
 
 
 //use express router

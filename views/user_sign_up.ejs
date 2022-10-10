@@ -1,38 +1,4 @@
-<!-- <div class="head">
-    <h1>Sign Up</h1>
-  </div>
-  
-  <div class="form">
-    <form action="/users/create" method="POST">
-      <div class="form-input">
-        <input type="text" name="name" placeholder="Your name" required />
-      </div>
-      <div class="form-input">
-        <input type="email" name="email" placeholder="Your email" required />
-      </div>
-  
-      <div class="form-input">
-        <input
-          type="password"
-          name="password"
-          placeholder="Your password"
-          required
-        />
-      </div>
-      <div class="form-input">
-        <input
-          type="password"
-          name="confirm_password"
-          placeholder="Confirm password"
-          required
-        />
-      </div>
-      <div class="form-input">
-        <input type="Submit" value="Sign Up" />
-      </div>
-      <button>Submit</button>
-    </form>
-  </div> -->
+
   <div class="modal modal-signin position-static d-block  py-5" tabindex="-1" role="dialog" id="modalSignin">
     <div class="modal-dialog" role="document">
       <div class="modal-content rounded-4 shadow">
@@ -41,7 +7,7 @@
           <h2 class="fw-bold mb-0">Sign up</h2>
         </div>
         <div class="modal-body p-5 pt-0">
-          <form class="" action="/users/create" method="post">
+          <form class="" action="/users/create" method="POST">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control rounded-3" id="userName" placeholder="User Name" name="name" required>
                 <label for="userName">Name</label>
@@ -56,8 +22,8 @@
              <label for="password">Password</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control rounded-3" id="confirmPassword" placeholder="Password" name="confirmPassword" required>
-              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" class="form-control rounded-3" id="confirmPassword" placeholder="Password" name="confirm_password" required>
+              <label for="confirm_password">Confirm Password</label>
           </div>
             <button class="w-100 mb-2 btn btn-lg rounded-3 btn-primary" type="submit">Sign up </button>
             <small class="text-muted">By clicking Sign up, you agree to the terms of use.</small> 

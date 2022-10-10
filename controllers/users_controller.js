@@ -30,13 +30,13 @@ module.exports.create=function(req,res){
 }
 module.exports.signup=function(req,res){
    
-    return res.render('user_sign_up',{title:'Codeial | Sign up'});
+    return res.render('user_sign_up',{title:'Sign up'});
 }
 //sign in
 module.exports.signin=function(req,res){
     //if the person sign in redirect to profile page and dont not open sign in page
   
-    return res.render('user_sign_in',{title:'Codeial | Sign in'});
+    return res.render('user_sign_in',{title:'Sign in'});
 }
 
 

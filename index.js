@@ -1,7 +1,9 @@
 const express=require('express');
+const dotenv=require("dotenv").config();
 const cookieparser=require('cookie-parser');
 const app=express();
 const port=8002;
+
 
 const expresslayouts=require('express-ejs-layouts');
 //db

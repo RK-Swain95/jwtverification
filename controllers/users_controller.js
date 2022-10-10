@@ -81,7 +81,7 @@ module.exports.update= async function(req,res){
     // to check if any other person change pasram is in html so for athenticate
     console.log("me");
     const token=req.cookies.jwt;
-    const verifyuser=jwt.verify(token,'codeial');
+    const verifyuser=jwt.verify(token,process.env.key);
    
     if(verifyuser._id==req.params.id){
         try{
@@ -106,7 +106,7 @@ module.exports.update= async function(req,res){
                     user.avatar=path.join(User.avatarPath,req.file.filename);
                 }
                 user.save();
-                 var token=jwt.sign(user.toJSON(),'codeial',{expiresIn:'1000000'});
+                 var token=jwt.sign(user.toJSON(),process.env.key,{expiresIn:'1000000'});
                 //handle session creation
                  res.cookie('jwt',token);
                  return res.redirect('/users/profile');
